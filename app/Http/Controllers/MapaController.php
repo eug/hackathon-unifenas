@@ -13,7 +13,7 @@ class MapaController extends Controller {
         Mapper::map(-21.7883, -46.5625, ['zoom' => 13, 'center' => true, 'marker' => false]);
     }
 
-    public function filtro($tipo) {
+    public function filtro($tipo = null) {
         //Separa os tipos de empresas
         switch ($tipo) {
             case "empresas":
@@ -23,7 +23,7 @@ class MapaController extends Controller {
                 $this->criarMarcadores();
                 break;
         }
-        return view('map');
+        return view('index');
     }
 
     public function criarMarcadores() {
