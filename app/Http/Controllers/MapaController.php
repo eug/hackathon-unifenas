@@ -91,7 +91,7 @@ class MapaController extends Controller {
                 $content .= "<b>Telefone: </b> $telefone</br>";
             }
 
-            $content .= "</br><a id = 'saibaMais' href ='#'  onClick = 'saibaMais()'> Saiba Mais </a>"
+            $content .= "</br><a id='saibaMais' href ='#'  onClick='saibaMais(this)'> Saiba Mais </a>"
                     . "<div id='bloco' style='display: none'> "
                     . "<b> Email:</b> $email </br>"
                     . "<b> Area de Atuação: </b>  $area </br> "

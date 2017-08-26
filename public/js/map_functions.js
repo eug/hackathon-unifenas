@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 
-function saibaMais(){
-    document.getElementById("saibaMais").style.display = "none";
-    document.getElementById("bloco").style.display = "block"; 
+function saibaMais(el){
+  el.style.display = "none";
+  console.log(el.parentElement.children);
+  el.parentElement.children[10].style.display = "block"; 
 }
