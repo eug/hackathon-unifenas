@@ -49,14 +49,14 @@
             <div class="row">
                 <div class="col">{!! $chartCapital->render() !!}</div>
                 <div class="col">
-                    <h1>Capital Declarado</h1>
-                    <p>Cerca de 3 em cada 10 empresas de Poços de Caldas não possuem renda declarada.</p>
+                    <h1>Investimento Inicial</h1>
+                    <p>O polo empreendedor de Poços de Caldas possui os mais diversos tipos de investimentos, desde grandes indústrias que afetam a economia de todo o estado, até empreendimentos individuais, que se tornam cada vez mais comuns no município, reprentando cerca de 3 em cada 10 empreendimentos.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h1>Os 10 bairros com mais empresas</h1>
-                    <p>O centro da cidade contém aproximadamente 7 em cada 10 empresas estabelecidas em Poços de Caldas!</p>
+                    <h1>Quantas empresas estão nossos bairros?</h1>
+                    <p>Apesar de bem distribuídas geograficamente, alguns bairros da cidade possum maior percentual de empresas. Apenas no centro do município, aproximadamente 7 em cada 10 empreendimentos estão estabelecidos. Vila Nova e Vila Cascata das Antas vem em seguida no ranking!</p>
                 </div>
                 <div class="col">{!! $chartBairros->render() !!}</div>
             </div>
@@ -64,7 +64,8 @@
                 <div class="col">{!! $chartIdades->render() !!}</div>
                 <div class="col">
                     <h1>Qual é a idade das nossas empresas?</h1>
-                    <p>Veja no gráfico ao lado, burrinho!</p>
+                    <p>Os últimos anos tem sido positivos para Poços de Caldas, investidores tem procurado oportunidades no município do que antigamente com mais frequência. Novos empregos e perspectivas estão sendo gerados no município. A movimentação do ecossistema empreendedor é nítida nos nos últimos 5 anos e a tendência é aumentar!
+                    </p>
                 </div>
             </div>
             <div class="row">
