@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('../../../node_modules/select2/dist/js/select2.min.js');
 
 //window.Vue = require('vue');
 //
