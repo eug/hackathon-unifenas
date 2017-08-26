@@ -20,16 +20,17 @@ class MapaController extends Controller {
                 continue;
             }
             $setor_ = $data[$i][24];
-            if (strpos($setor_, $pesquisa) !== false) {
+            if (strpos($setor_, $pesquisa)== true) {
                 $lat = $data[$i][27];
                 $lng = $data[$i][28];
                 $cnpj = $data[$i][4];
+                echo("$lat, $lng </br>");
                 $fantasia = $data[$i][10] == "" ? $data[$i][15] : $data[$i][10];
                 $fundacao = $data[$i][6];
                 $telefone = $data[$i][20];
                 $email = $data[$i][9];
                 $area = $data[$i][24];
-               
+
                 $content = "<h6> $fantasia </h6></br>"
                         . "<b> CNPJ:</b> $cnpj</br>"
                         . "<b> Fundação: </b> $fundacao </br>";
@@ -49,26 +50,22 @@ class MapaController extends Controller {
 
     public function filtro($tipo = null, $pesquisa = null) {
         //Separa os tipos de empresas
+        $chartCapital = $this->graficoDeCapitalSocial();
+        $chartBairros = $this->graficoDeBairros();
+        $chartIdades = $this->graficoIdadeEmpresas();
+        $chartEvolucao = $this->graficoEvolucaoNumeroEmpresas();
+        $chartSetoresComercio = $this->graficoSetoresComercio();
         switch ($tipo) {
             case "setor":
                 $this->porSetor($pesquisa);
                 break;
             default :
                 $this->criarMarcadores();
-
                 break;
         }
-        $chartCapital = $this->graficoDeCapitalSocial();
-        $chartBairros = $this->graficoDeBairros();
-        $chartIdades = $this->graficoIdadeEmpresas();
-        $chartEvolucao = $this->graficoEvolucaoNumeroEmpresas();
-        $chartSetoresComercio = $this->graficoSetoresComercio();
-
-        return view(
-                'index', compact(
+        return view('index', compact(
                         'chartCapital', 'chartBairros', 'chartIdades', 'chartEvolucao', 'chartSetoresComercio'
-                )
-        );
+                ));
     }
 
     public function criarMarcadores() {

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Data Alchemists - Hackathon</title>
 
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
 
     {!! Charts::assets() !!}
 
@@ -238,8 +238,8 @@
     </article>
 </div>
 
-<script src="js/app.js"></script>
-<script src="js/map_functions.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/map_functions.js"></script>
 <script>
     $(".statistics-btn").click(function (event) {
         event.preventDefault();
