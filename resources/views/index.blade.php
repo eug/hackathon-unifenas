@@ -13,7 +13,7 @@
 
 {{--<div class="container">--}}
 {{--<h1>Data Alchemists - Hackathon</h1>--}}
-<div class="map">
+<div class="map is-active">
     {!! Mapper::render() !!}
 </div>
 <div class="site-container">
@@ -73,9 +73,13 @@
 <script src="js/app.js"></script>
 <script src="js/map_functions.js"></script>
 <script>
-    $(".statistics-btn").click((element) => {
-        element.preventDefault();
-        $(".map").toggleClass("is-hidden");
+    $(".statistics-btn").click(function(event){
+        event.preventDefault();
+        $(".map").toggleClass("is-active");
+        $(".form-row").toggleClass("is-hidden");
+        $(this).text(function(i, text){
+            return text === "Estatísticas" ? "Mapa" : "Estatísticas";
+        })
     });
 </script>
 </body>
