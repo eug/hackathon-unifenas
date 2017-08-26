@@ -9330,16 +9330,17 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0;
           flex: 1 0;
-  z-index: 0;
+  z-index: 10;
   -webkit-animation: 0.3s ease-in-out all;
           animation: 0.3s ease-in-out all;
 }
 
-.map.is-active {
-  z-index: 10;
+.map.is-hidden {
+  display: none;
 }
 
 .toolbar {
+  position: fixed;
   z-index: 100;
   padding: 1em;
 }
@@ -9387,6 +9388,11 @@ body {
 
 .article {
   z-index: 1;
+  padding-top: 5em;
+}
+
+.article.is-hidden {
+  display: none;
 }
 
 .article h1,
@@ -9396,5 +9402,13 @@ body {
 .article h5,
 .article h6 {
   font-weight: 100;
+}
+
+table {
+  font-size: 1.5em;
+}
+
+table th {
+  font-family: "Open Sans", sans-serif;
 }
 

@@ -22,10 +22,10 @@ body {
 
 .map {
   flex: 1 0;
-  z-index: 0;
+  z-index: 10;
 
-  &.is-active {
-    z-index: 10;
+  &.is-hidden {
+    display: none;
   }
 
   animation: 0.3s ease-in-out all;
@@ -33,7 +33,7 @@ body {
 
 .toolbar {
   @extend .col-10;
-
+  position: fixed;
   z-index: 100;
   padding: 1em;
   //background: #cecece;
@@ -83,8 +83,21 @@ body {
 
 .article {
   z-index: 1;
+  padding-top: 5em;
+
+  &.is-hidden {
+    display: none;
+  }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 100;
+  }
+}
+
+table {
+  font-size: 1.5em;
+
+  th {
+    font-family: "Open Sans", sans-serif;
   }
 }
