@@ -15,3 +15,5 @@ Route::get('/', 'MapaController@filtro');
 
 Route::get('/mapa/', 'MapaController@filtro');
 Route::get('/maker', 'MapaController@teste');
+Route::get('/grafico', 'GraficosController@index');
+

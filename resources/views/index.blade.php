@@ -29,9 +29,7 @@
                         <option value="3">Three</option>
                     </select>
                     <input type="text" class="form-control" placeholder="Digite aqui">
-                    {{--<button class="btn btn-primary">Buscar</button>--}}
                 </div>
-                <button class="statistics-btn">Estatísticas</button>
             </form>
         </div>
     </div>

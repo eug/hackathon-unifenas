@@ -178,6 +178,8 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 	Cornford\Googlmapper\MapperServiceProvider::class,
+        
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
 
     ],
 
@@ -228,7 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 	'Mapper'         => Cornford\Googlmapper\Facades\MapperFacade::class,
-
+        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
     ],
 
 ];
