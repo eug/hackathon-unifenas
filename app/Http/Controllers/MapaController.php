@@ -26,25 +26,29 @@ class MapaController extends Controller {
     }
 
     public function criarMarcadores() {
-        $arq = file(base_path()."/dados/latlon.csv");
+        $arq = file(base_path() . "/dados/latlon.csv");
 //        
 //        foreach($arq as $line){
 //            $data[] = str_getcsv($line, $delimiter = ';');
 //        }
-        for($i=0; $i < sizeof($arq); $i++) {
-            $data[] = str_getcsv($arq[$i], $delimiter = ';');
-            if($i == 0) {
+        for ($i = 0; $i < sizeof($arq); $i++) {
+            $data[] = str_getcsv($arq[$i], $delimiter = ',');
+            if ($i == 0) {
                 continue;
             }
-            $addr =$data[$i][0];
-            $lat = $data[$i][1];
-            $lng = $data[$i][2];
-            Mapper::marker($lat, $lng, ['draggable' => true, 'eventRightClick' => "teste('$lat','$lng','$addr');"]);#(function(){alert('".$data[$i][0]."');})();
-            Mapper::informationWindow($lat, $lng, 'content');
-            # dd($data[$i]);
+            $lat = $data[$i][27];
+            $lng = $data[$i][28];
+            $cnpj = $data[$i][4];
+            $fantasia = $data[$i][10];
+            
+            
+            $content = "<h6> $fantasia </h6></br>"
+                      ."<b> CNPJ:</b> $cnpj</br>";
+            
+            
+            
+            Mapper::informationWindow($lat, $lng, $content);
         }
-        
-        #dd($data);
     }
 
     private function porEmpresa($empresas) {
