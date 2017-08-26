@@ -39,11 +39,19 @@ class MapaController extends Controller {
             $lat = $data[$i][27];
             $lng = $data[$i][28];
             $cnpj = $data[$i][4];
-            $fantasia = $data[$i][10];
-            
+            $fantasia = $data[$i][10] == ""? $data[$i][15]: $data[$i][10];
+            $fundacao = $data[$i][6];
+            $telefone = $data[$i][20];
+            $doc = $data[$i][26];
             
             $content = "<h6> $fantasia </h6></br>"
-                      ."<b> CNPJ:</b> $cnpj</br>";
+                      ."<b> CNPJ:</b> $cnpj</br>"
+                      ."<b> Fundação: </b> $fundacao </br>";
+            if($telefone != ""){
+                $content .= "<b>Telefone: </b> $telefone</br>";
+            }
+            $content .= "</br><a href='/$doc'> Saiba Mais </a>";
+            
             
             
             
