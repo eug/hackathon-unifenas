@@ -55,7 +55,7 @@
                         <h1>Investimento Inicial</h1>
                         <p>O polo empreendedor de Poços de Caldas possui os mais diversos tipos de investimentos, desde
                             grandes indústrias que afetam a economia de todo o estado, até empreendimentos individuais,
-                            que se tornam cada vez mais comuns no município, reprentando cerca de 3 em cada 10
+                            que se tornam cada vez mais comuns no município, representando cerca de 3 em cada 10
                             empreendimentos.</p>
                     </div>
                 </div>
@@ -76,10 +76,11 @@
                     <div class="col">{!! $chartIdades->render() !!}</div>
                     <div class="col">
                         <h1>Qual é a idade das nossas empresas?</h1>
-                        <p>Os últimos anos tem sido positivos para Poços de Caldas. Investidores tem procurado
-                            oportunidades no município do que antigamente com mais frequência. Novos empregos e
-                            perspectivas estão sendo gerados no município. A movimentação do ecossistema empreendedor é
-                            nítida nos nos últimos 5 anos e a tendência é aumentar!</p>
+                        <p>Os últimos anos tem sido positivos para a cidade.
+                        A movimentação do ecossistema empreendedor é
+                            nítida nos nos últimos 5 anos e a tendência é aumentar.
+                            Empreendedores tem buscado cada vez mais instalar sua nova empresa no município, gerando novos empregos e
+                            perspectivas a todo instante!</p>
                     </div>
                 </div>
             </section>
@@ -87,7 +88,7 @@
                 <div class="row">
                     <div class="col">
                         <h1>Criação de empresas ao longo do tempo</h1>
-                        <p>Blah blah.</p>
+                        <p>Novas empresas surgem a todo instante em Poços de Caldas. Os últimos anos tem sido de constante mudança e evolução na cidade que cada vez mais se solidifica como polo empreendedor. Instalar seu mais novo empreendorismo em Poços de Caldas definitivamente é uma ótima opção!</p>
                     </div>
                     <div class="col">{!! $chartEvolucao->render() !!}</div>
                 </div>
