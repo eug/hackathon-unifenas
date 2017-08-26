@@ -2428,33 +2428,42 @@ fieldset[disabled] a.statistics-btn {
   pointer-events: none;
 }
 
-.btn-primary {
+.btn-primary,
+.statistics-btn {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.statistics-btn:hover {
   color: #fff;
   background-color: #0069d9;
   border-color: #0062cc;
 }
 
 .btn-primary:focus,
-.btn-primary.focus {
+.statistics-btn:focus,
+.btn-primary.focus,
+.focus.statistics-btn {
   -webkit-box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
           box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }
 
 .btn-primary.disabled,
-.btn-primary:disabled {
+.disabled.statistics-btn,
+.btn-primary:disabled,
+.statistics-btn:disabled {
   background-color: #007bff;
   border-color: #007bff;
 }
 
 .btn-primary:active,
+.statistics-btn:active,
 .btn-primary.active,
-.show > .btn-primary.dropdown-toggle {
+.active.statistics-btn,
+.show > .btn-primary.dropdown-toggle,
+.show > .dropdown-toggle.statistics-btn {
   background-color: #0069d9;
   background-image: none;
   border-color: #0062cc;
@@ -2492,42 +2501,33 @@ fieldset[disabled] a.statistics-btn {
   border-color: #6c757d;
 }
 
-.btn-success,
-.statistics-btn {
+.btn-success {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
 }
 
-.btn-success:hover,
-.statistics-btn:hover {
+.btn-success:hover {
   color: #fff;
   background-color: #218838;
   border-color: #1e7e34;
 }
 
 .btn-success:focus,
-.statistics-btn:focus,
-.btn-success.focus,
-.focus.statistics-btn {
+.btn-success.focus {
   -webkit-box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
           box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
 }
 
 .btn-success.disabled,
-.disabled.statistics-btn,
-.btn-success:disabled,
-.statistics-btn:disabled {
+.btn-success:disabled {
   background-color: #28a745;
   border-color: #28a745;
 }
 
 .btn-success:active,
-.statistics-btn:active,
 .btn-success.active,
-.active.statistics-btn,
-.show > .btn-success.dropdown-toggle,
-.show > .dropdown-toggle.statistics-btn {
+.show > .btn-success.dropdown-toggle {
   background-color: #218838;
   background-image: none;
   border-color: #1e7e34;
@@ -9387,5 +9387,14 @@ body {
 
 .article {
   z-index: 1;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+  font-weight: 100;
 }
 
