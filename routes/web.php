@@ -11,8 +11,9 @@
   |
  */
 
-Route::get('/', 'MapaController@filtro');
-Route::get('/{setor}/{pesquisa}', 'MapaController@filtro');
+Route::get('/', 'MapaController@index');
+Route::get('/setor/{code}', 'MapaController@setor');
+Route::get('/nome/{nome}', 'MapaController@nome');
 
 //Route::get('/saibamais/{cnpj}', 'MapaController@saibaMais');
 
