@@ -12,7 +12,9 @@
  */
 
 Route::get('/', 'MapaController@filtro');
-Route::get('/saibamais/{cnpj}', 'MapaController@saibaMais');
+Route::get('/{setor}/{pesquisa}', 'MapaController@filtro');
+
+//Route::get('/saibamais/{cnpj}', 'MapaController@saibaMais');
 
 Route::get('/mapa/', 'MapaController@filtro');
 Route::get('/maker', 'MapaController@teste');
