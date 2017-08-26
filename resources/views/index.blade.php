@@ -8,12 +8,15 @@
     <title>Data Alchemists - Hackathon</title>
 
     <link rel="stylesheet" href="css/app.css">
+
+    {!! Charts::assets() !!}
+
 </head>
 <body>
 
 {{--<div class="container">--}}
 {{--<h1>Data Alchemists - Hackathon</h1>--}}
-<div class="map">
+<div class="map is-active">
     {!! Mapper::render() !!}
 </div>
 <div class="site-container">
@@ -35,47 +38,64 @@
         </div>
     </div>
     <article class="article">
-        <div class="jumbotron">
-            <h1 class="display-3">Jumbotron heading</h1>
-            <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus
-                commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-1">Poços de Caldas</h1>
+                    <p class="h4">Informações gerais e estatísticas</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">{!! $chartCapital->render() !!}</div>
+                <div class="col">
+                    <h1>Capital Declarado</h1>
+                    <p>Cerca de 3 em cada 10 empresas de Poços de Caldas não possuem renda declarada.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>Os 10 bairros com mais empresas</h1>
+                    <p>O centro da cidade contém aproximadamente 7 em cada 10 empresas estabelecidas em Poços de Caldas!</p>
+                </div>
+                <div class="col">{!! $chartBairros->render() !!}</div>
+            </div>
+            <div class="row">
+                <div class="col">{!! $chartIdades->render() !!}</div>
+                <div class="col">
+                    <h1>Qual é a idade das nossas empresas?</h1>
+                    <p>Veja no gráfico ao lado, burrinho!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">{!! $chartEvolucao->render() !!}</div>
+                <div class="col">
+                    <h1>Criação de empresas ao longo do tempo</h1>
+                    <p>Blah blah.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">{!! $chartSetoresComercio->render() !!}</div>
+                <div class="col">
+                    <h1>Ranking de setores do comércio</h1>
+                    <p>Blah blah.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="row marketing">
-            <div class="col-lg-6">
-                <h4>Subheading</h4>
-                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-                <h4>Subheading</h4>
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
-                    fermentum.</p>
-
-                <h4>Subheading</h4>
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            </div>
-
-            <div class="col-lg-6">
-                <h4>Subheading</h4>
-                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-                <h4>Subheading</h4>
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
-                    fermentum.</p>
-
-                <h4>Subheading</h4>
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            </div>
-        </div>
     </article>
 </div>
 
 <script src="js/app.js"></script>
 <script src="js/map_functions.js"></script>
 <script>
-    $(".statistics-btn").click((element) => {
-        element.preventDefault();
-        $(".map").toggleClass("is-hidden");
+    $(".statistics-btn").click(function (event) {
+        event.preventDefault();
+        $(".map").toggleClass("is-active");
+        $(".form-row").toggleClass("is-hidden");
+        $(this).text(function (i, text) {
+            return text === "Estatísticas" ? "Mapa" : "Estatísticas";
+        })
     });
 </script>
 </body>

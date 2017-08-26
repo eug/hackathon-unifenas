@@ -1,5 +1,5 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:100');
 // Variables
 //@import "variables";
 // Bootstrap
@@ -8,6 +8,12 @@
 
 html, body {
   height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -16,11 +22,13 @@ body {
 
 .map {
   flex: 1 0;
-  z-index: 10;
+  z-index: 0;
 
-  &.is-hidden {
-    display: none;
+  &.is-active {
+    z-index: 10;
   }
+
+  animation: 0.3s ease-in-out all;
 }
 
 .toolbar {
@@ -36,6 +44,9 @@ body {
 
   display: flex;
   align-items: baseline;
+  margin-top: 1em;
+  justify-content: flex-end;
+
 
   .filter-select {
     border-radius: 0;
@@ -50,11 +61,15 @@ body {
 .form-row {
   @extend .input-group;
   flex: 1 1;
+
+  &.is-hidden {
+    display: none;
+  }
 }
 
 .statistics-btn {
   @extend .btn;
-  @extend .btn-success;
+  @extend .btn-primary;
 
   margin-left: 10em;
 }
@@ -62,9 +77,14 @@ body {
 .site-container {
   @extend .container-fluid;
   position: absolute;
-  margin-top: 1em;
+  height: 100%;
+  background: #fff;
 }
 
 .article {
   z-index: 1;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+  }
 }
