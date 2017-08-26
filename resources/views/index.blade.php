@@ -27,9 +27,8 @@
                     <div class="input-group-addon">Filtros</div>
                     <select class="filter-select" id="inlineFormInputGroupUsername">
                         <option selected>Escolha o filtro</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="1">Nome</option>
+                        <option value="2">Setor</option>
                     </select>
                     <input type="text" class="form-control" placeholder="Digite aqui">
                 </div>
