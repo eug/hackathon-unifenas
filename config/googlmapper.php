@@ -133,7 +133,7 @@ return array(
     | Set if map type control should be displayed by Googlmapper.
     |
     */
-    'mapTypeControl' => true,
+    'mapTypeControl' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -153,7 +153,7 @@ return array(
     | Set if street view control should be displayed by Googlmapper.
     |
     */
-    'streetViewControl' => true,
+    'streetViewControl' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -173,7 +173,7 @@ return array(
     | Set if fullscreen control should be displayed by Googlmapper.
     |
     */
-    'fullscreenControl' => true,
+    'fullscreenControl' => false,
 
     /*
     |--------------------------------------------------------------------------
