@@ -14,8 +14,6 @@
 </head>
 <body>
 
-{{--<div class="container">--}}
-{{--<h1>Data Alchemists - Hackathon</h1>--}}
 <div class="map">
     {!! Mapper::render() !!}
 </div>
@@ -356,48 +354,34 @@
                     </div>
                 </div>
                 <div class="row">
-                    {{--<div class="col"><h1>Setores com maior participação no comércio</h1></div>--}}
                     <div class="col">
                         <table class="table">
-                            {{--<thead>--}}
-                            {{--<tr>--}}
-                            {{--<th>#</th>--}}
-                            {{--<th>Setor</th>--}}
-                            {{--<th>Percentual de Participação</th>--}}
-                            {{--</tr>--}}
-                            {{--</thead>--}}
                             <tbody>
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Comércio varejista de artigos do vestuário e acessórios</td>
-                                {{--<td>37.745975</td>--}}
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td>Lanchonetes, casas de chá, de sucos e similares</td>
-                                {{--<td>17.173524</td>--}}
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
                                 <td>Comércio varejista de mercadorias em geral, com predominância de produtos
                                     alimentícios
                                 </td>
-                                {{--<td>15.384615</td>--}}
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
                                 <td>Restaurantes e similares</td>
-                                {{--<td>15.026834</td>--}}
                             </tr>
                             <tr>
                                 <th scope="row">5</th>
                                 <td>Bares e outros estabelecimentos especializados em servir bebidas</td>
-                                {{--<td>10.196780</td>--}}
                             </tr>
                             <tr>
                                 <th scope="row">6</th>
                                 <td>Comércio a varejo de peças e acessórios novos para veículos automotores</td>
-                                {{--<td>9.302326</td>--}}
                             </tr>
                             <tr>
                                 <th scope="row">7</th>
@@ -405,12 +389,10 @@
                                     intermunicipal,
                                     interestadual e internacional
                                 </td>
-                                {{--<td>7.692308</td>--}}
                             </tr>
                             <tr>
                                 <th scope="row">8</th>
                                 <td>Comércio varejista de outros produtos não especificados anteriormente</td>
-                                {{--<td>6.976744</td>--}}
                             </tr>
                             </tbody>
                         </table>
@@ -426,62 +408,45 @@
                 <div class="row">
                     <div class="col">
                         <table class="table">
-                            {{--<thead>--}}
-                            {{--<tr>--}}
-                            {{--<th>Capital Social</th>--}}
-                            {{--<th>#</th>--}}
-                            {{--<th>Setor</th>--}}
-                            {{--</tr>--}}
-                            {{--</thead>--}}
                             <tbody>
                             <tr>
                                 <td>2,0M</td>
-                                {{--<th scope="row">1</th>--}}
                                 <td>Comércio atacadista de café em grão</td>
                             </tr>
                             <tr>
                                 <td>1,6M</td>
-                                {{--<th scope="row">2</th>--}}
                                 <td>Outras obras de engenharia civil não especificadas anteriormente</td>
                             </tr>
                             <tr>
                                 <td>1,4M</td>
-                                {{--<th scope="row">3</th>--}}
                                 <td>Corretagem no aluguel de imóvei</td>
                             </tr>
                             <tr>
                                 <td>1,1M</td>
-                                {{--<th scope="row">4</th>--}}
                                 <td>Aluguel de imóveis próprios</td>
                             </tr>
                             <tr>
                                 <td>1,0M</td>
-                                {{--<th scope="row">5</th>--}}
                                 <td>Compra e venda de imóveis próprios</td>
                             </tr>
                             <tr>
                                 <td>750K</td>
-                                {{--<th scope="row">6</th>--}}
                                 <td>Fabricação de artigos de vidro</td>
                             </tr>
                             <tr>
                                 <td>200K</td>
-                                {{--<th scope="row">7</th>--}}
                                 <td>Comércio por atacado de peças e acessórios para motocicletas e motonetas</td>
                             </tr>
                             <tr>
                                 <td>190K</td>
-                                {{--<th scope="row">8</th>--}}
                                 <td>Comércio varejista de materiais de construção em geral</td>
                             </tr>
                             <tr>
                                 <td>158K</td>
-                                {{--<th scope="row">9</th>--}}
                                 <td>Comércio varejista de combustíveis para veículos automotores</td>
                             </tr>
                             <tr>
                                 <td>150K</td>
-                                {{--<th scope="row">10</th>--}}
                                 <td>Comércio atacadista de instrumentos e materiais para uso médico, cirúrgico,
                                     hospitalar e de laboratórios
                                 </td>
@@ -498,50 +463,50 @@
 <script src="/js/app.js"></script>
 <script src="/js/map_functions.js"></script>
 <script>
-    $(".statistics-btn").click(function (event) {
-        event.preventDefault();
-        $(".map").toggleClass("is-hidden");
-        $(".article").toggleClass("is-hidden");
-        $(".form-row").toggleClass("is-hidden");
-        $(this).text(function (i, text) {
-            return text === "Estatísticas" ? "Mapa" : "Estatísticas";
-        })
-    });
+
     $(document).ready(function () {
         $(".filter-input").select2();
-    });
-    $(".filter-select").change(function () {
-//        console.log(this);
-        if ($(this).val() === '2') {
-            $('.by-category').each(function () {
-                this.style.setProperty('display', 'block', 'important');
-            });
-            $('.by-category ~ .select2').each(function () {
-                this.style.setProperty('display', 'block', 'important');
-            });
-            $(".by-name").css("display", "none");
-        } else {
-            $(".by-category").css("display", "none");
-            $(".by-category ~ .select2").css("display", "none");
-            $(".by-name").css("display", "block");
-        }
-    });
-    $(document).ready(function () {
+
         $('.by-category').on('change', function () {
-            var code = $(this).val();
-//            console.log(code);
+            let code = $(this).val();
             $(".toolbar-form").attr('action', "/setor/" + code).submit();
         });
 
         $('.by-name').on("keypress", function (e) {
-            var code = (e.keyCode ? e.keyCode : e.which);
+            let code = (e.keyCode ? e.keyCode : e.which);
             if (code == 13) {
                 e.preventDefault();
                 e.stopPropagation();
-                var name = $(this).val();
+                let name = $(this).val();
                 console.log(name);
                 $(".toolbar-form").attr('action', "/nome/" + name).submit();
 
+            }
+        });
+
+        $(".statistics-btn").click(function (event) {
+            event.preventDefault();
+            $(".map").toggleClass("is-hidden");
+            $(".article").toggleClass("is-hidden");
+            $(".form-row").toggleClass("is-hidden");
+            $(this).text(function (i, text) {
+                return text === "Estatísticas" ? "Mapa" : "Estatísticas";
+            })
+        });
+
+        $(".filter-select").change(function () {
+            if ($(this).val() === '2') {
+                $('.by-category').each(function () {
+                    this.style.setProperty('display', 'block', 'important');
+                });
+                $('.by-category ~ .select2').each(function () {
+                    this.style.setProperty('display', 'block', 'important');
+                });
+                $(".by-name").css("display", "none");
+            } else {
+                $(".by-category").css("display", "none");
+                $(".by-category ~ .select2").css("display", "none");
+                $(".by-name").css("display", "block");
             }
         });
 
