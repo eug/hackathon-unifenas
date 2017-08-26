@@ -4,14 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Mapper;
-use Collective\Html\HtmlFacade as Html;
 
 class MapaController extends Controller {
 
     public function __construct() {
         //Setando a posição de Poços de Caldas
         Mapper::map(-21.7883, -46.5625, ['zoom' => 13, 'center' => true, 'marker' => false]);
-        HTML::script('js/app.js');
     }
 
     public function filtro($tipo = null) {
@@ -38,7 +36,10 @@ class MapaController extends Controller {
             if($i == 0) {
                 continue;
             }
-            Mapper::marker($data[$i][1], $data[$i][2], ['draggable' => true, 'eventRightClick' => "teste();"]);#(function(){alert('".$data[$i][0]."');})();
+            $addr =$data[$i][0];
+            $lat = $data[$i][1];
+            $lng = $data[$i][2];
+            Mapper::marker($lat, $lng, ['draggable' => true, 'eventRightClick' => "teste('$lat','$lng','$addr');"]);#(function(){alert('".$data[$i][0]."');})();
            # dd($data[$i]);
         }
         

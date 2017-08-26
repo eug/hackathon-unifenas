@@ -21,7 +21,4 @@ const app = new Vue({
     el: '#app'
 });
 
-function teste(){
-    alert("Hello World");
-}
 
