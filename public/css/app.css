@@ -3462,15 +3462,17 @@ tbody.collapse.show {
 .input-group-addon {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.25;
+  font-size: 11px;
+  
+  /*line-height: 1;*/
   color: #495057;
   text-align: center;
-  background-color: #e9ecef;
+  background-color: white;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
 }
 
 .input-group-addon.form-control-sm,
@@ -9343,17 +9345,17 @@ body {
 .toolbar {
   position: fixed;
   z-index: 100;
-  padding: 1em;
+  padding-left: 160px;
 }
 
 .toolbar-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
+/*  -webkit-box-align: baseline;
       -ms-flex-align: baseline;
-          align-items: baseline;
-  margin-top: 1em;
+          align-items: baseline;*/
+  margin-top: 6px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -9365,6 +9367,8 @@ body {
   color: #495057;
   border-right: 0;
   padding: 0 1em;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 11px;
 }
 
 .form-row {
