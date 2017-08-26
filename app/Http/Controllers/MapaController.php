@@ -40,7 +40,8 @@ class MapaController extends Controller {
             $lat = $data[$i][1];
             $lng = $data[$i][2];
             Mapper::marker($lat, $lng, ['draggable' => true, 'eventRightClick' => "teste('$lat','$lng','$addr');"]);#(function(){alert('".$data[$i][0]."');})();
-           # dd($data[$i]);
+            Mapper::informationWindow($lat, $lng, 'content');
+            # dd($data[$i]);
         }
         
         #dd($data);
