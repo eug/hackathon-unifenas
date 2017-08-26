@@ -9,7 +9,7 @@ class MapaController extends Controller {
 
     public function __construct() {
         //Setando a posição de Poços de Caldas
-        Mapper::map(-21.7883, -46.5625, ['zoom' => 13, 'center' => true, 'marker' => false]);
+        Mapper::map(-21.8093, -46.5835, ['zoom' => 13, 'center' => true, 'marker' => false]);
     }
 
     public function filtro($tipo = null) {
