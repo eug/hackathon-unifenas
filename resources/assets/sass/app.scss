@@ -1,10 +1,7 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 //@import "variables";
-
 // Bootstrap
 //@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -19,10 +16,55 @@ body {
 
 .map {
   flex: 1 0;
+  z-index: 10;
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.toolbar {
+  @extend .col-10;
+
+  z-index: 100;
+  padding: 1em;
+  //background: #cecece;
+
+}
+
+.toolbar-form {
+
+  display: flex;
+  align-items: baseline;
+
+  .filter-select {
+    border-radius: 0;
+    -webkit-appearance: none;
+    color: #495057;
+    border-right: 0;
+    padding: 0 1em;
+  }
+
+}
+
+.form-row {
+  @extend .input-group;
+  flex: 1 1;
+}
+
+.statistics-btn {
+  @extend .btn;
+  @extend .btn-success;
+
+  margin-left: 10em;
 }
 
 .site-container {
   @extend .container-fluid;
   position: absolute;
   margin-top: 1em;
+}
+
+.article {
+  z-index: 1;
 }
