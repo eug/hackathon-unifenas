@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MapaController@filtro');
 
-Route::get('/mapa/{filtro}', 'MapaController@filtro');
+Route::get('/mapa/', 'MapaController@filtro');
 Route::get('/maker', 'MapaController@teste');
