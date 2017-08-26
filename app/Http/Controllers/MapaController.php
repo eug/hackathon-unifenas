@@ -167,7 +167,7 @@ class MapaController extends Controller {
 
     private function graficoDeCapitalSocial() {
         return Charts::create('bar', 'highcharts')
-                        ->title('Frequencia de capital social declarada')
+                        ->title('   ')
                         ->labels(
                                 [
                                     '0',
@@ -185,7 +185,7 @@ class MapaController extends Controller {
 
     private function graficoDeBairros() {
         return Charts::create('pie', 'highcharts')
-                        ->title('Frequência de empresas nos 10 bairros com mais empresas')
+                        ->title('   ')
                         ->labels(
                                 [
                                     'Parque Primavera',
@@ -205,7 +205,7 @@ class MapaController extends Controller {
 
     private function graficoIdadeEmpresas() {
         return Charts::create('bar', 'highcharts')
-                        ->title('Idades das Empresas')
+                        ->title('   ')
                         ->labels(
                                 [
                                     '0 a 5 anos',
@@ -221,7 +221,7 @@ class MapaController extends Controller {
 
     private function graficoEvolucaoNumeroEmpresas() {
         return Charts::create('line', 'highcharts')
-                        ->title('Evolução no número de empresas')
+                        ->title('   ')
                         ->labels(
                                 [
                                     1965,
@@ -336,7 +336,7 @@ class MapaController extends Controller {
 
     private function graficoSetoresComercio() {
         return Charts::create('pie', 'highcharts')
-                        ->title('Principais setores no comércio')
+                        ->title('   ')
                         ->labels(
                                 [
                                     "Comércio varejista de outros produtos não especificados anteriormente",

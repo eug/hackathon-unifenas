@@ -44,47 +44,55 @@
                     <div class="col">
                         <h1 class="display-1">Poços de Caldas</h1>
                         <p class="h4">Informações gerais e estatísticas</p>
+
                     </div>
                 </div>
             </section>
-            <section class="mb-5">
+            <section class="mb-5 pb-5">
                 <div class="row">
                     <div class="col">{!! $chartCapital->render() !!}</div>
                     <div class="col">
-                        <h1>Capital Declarado</h1>
-                        <p>Cerca de 3 em cada 10 empresas de Poços de Caldas não possuem renda declarada.</p>
+                        <h1>Investimento Inicial</h1>
+                        <p>O polo empreendedor de Poços de Caldas possui os mais diversos tipos de investimentos, desde
+                            grandes indústrias que afetam a economia de todo o estado, até empreendimentos individuais,
+                            que se tornam cada vez mais comuns no município, reprentando cerca de 3 em cada 10
+                            empreendimentos.</p>
                     </div>
                 </div>
             </section>
-            <section class="mb-5">
+            <section class="mb-5 pb-5">
                 <div class="row">
                     <div class="col">
-                        <h1>Os 10 bairros com mais empresas</h1>
-                        <p>O centro da cidade contém aproximadamente 7 em cada 10 empresas estabelecidas em Poços de
-                            Caldas!</p>
+                        <h1>Quantas empresas estão nos nossos bairros?</h1>
+                        <p>Apesar de bem distribuídas geograficamente, alguns bairros da cidade possum maior percentual
+                            de empresas. Apenas no centro do município, aproximadamente 7 em cada 10 empreendimentos
+                            estão estabelecidos. Vila Nova e Vila Cascata das Antas vem em seguida no ranking!</p>
                     </div>
                     <div class="col">{!! $chartBairros->render() !!}</div>
                 </div>
             </section>
-            <section class="mb-5">
+            <section class="mb-5 pb-5">
                 <div class="row">
                     <div class="col">{!! $chartIdades->render() !!}</div>
                     <div class="col">
                         <h1>Qual é a idade das nossas empresas?</h1>
-                        <p>Veja no gráfico ao lado, burrinho!</p>
+                        <p>Os últimos anos tem sido positivos para Poços de Caldas. Investidores tem procurado
+                            oportunidades no município do que antigamente com mais frequência. Novos empregos e
+                            perspectivas estão sendo gerados no município. A movimentação do ecossistema empreendedor é
+                            nítida nos nos últimos 5 anos e a tendência é aumentar!</p>
                     </div>
                 </div>
             </section>
-            <section class="mb-5">
+            <section class="mb-5 pb-5">
                 <div class="row">
-                    <div class="col">{!! $chartEvolucao->render() !!}</div>
                     <div class="col">
                         <h1>Criação de empresas ao longo do tempo</h1>
                         <p>Blah blah.</p>
                     </div>
+                    <div class="col">{!! $chartEvolucao->render() !!}</div>
                 </div>
             </section>
-            <section class="mb-5">
+            <section class="mb-5 pb-5">
                 <div class="row">
                     <div class="col">
                         <h1>Setores com maior participação no comércio</h1>
@@ -115,8 +123,7 @@
                             <tr>
                                 <th scope="row">3</th>
                                 <td>Comércio varejista de mercadorias em geral, com predominância de produtos
-                                    alimentícios -
-                                    minimercados, mercearias e armazéns
+                                    alimentícios
                                 </td>
                                 {{--<td>15.384615</td>--}}
                             </tr>
@@ -153,83 +160,82 @@
                     </div>
                 </div>
             </section>
-            <section class="mb-3">
+            <section class="mb-5 pb-5">
                 <div class="row">
                     <div class="col">
-                        <h1>Maiores médias de capital social por setor</h1>
+                        <h1>Maiores médias de capital social (R$) por setor</h1>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <table class="table">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Setor</th>
-                                <th>Capital Social</th>
-                            </tr>
-                            </thead>
+                            {{--<thead>--}}
+                            {{--<tr>--}}
+                                {{--<th>Capital Social</th>--}}
+                                {{--<th>#</th>--}}
+                                {{--<th>Setor</th>--}}
+                            {{--</tr>--}}
+                            {{--</thead>--}}
                             <tbody>
                             <tr>
-                                <th scope="row">1</th>
+                                <td>2,0M</td>
+                                {{--<th scope="row">1</th>--}}
                                 <td>Comércio atacadista de café em grão</td>
-                                <td>2,000M</td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
+                                <td>1,6M</td>
+                                {{--<th scope="row">2</th>--}}
                                 <td>Outras obras de engenharia civil não especificadas anteriormente</td>
-                                <td>1,600M</td>
                             </tr>
                             <tr>
-                                <th scope="row">3</th>
+                                <td>1,4M</td>
+                                {{--<th scope="row">3</th>--}}
                                 <td>Corretagem no aluguel de imóvei</td>
-                                <td>1,440M</td>
                             </tr>
                             <tr>
-                                <th scope="row">4</th>
+                                <td>1,1M</td>
+                                {{--<th scope="row">4</th>--}}
                                 <td>Aluguel de imóveis próprios</td>
-                                <td>1,089M</td>
                             </tr>
                             <tr>
-                                <th scope="row">5</th>
+                                <td>1,0M</td>
+                                {{--<th scope="row">5</th>--}}
                                 <td>Compra e venda de imóveis próprios</td>
-                                <td>997,933k</td>
                             </tr>
                             <tr>
-                                <th scope="row">6</th>
+                                <td>750K</td>
+                                {{--<th scope="row">6</th>--}}
                                 <td>Fabricação de artigos de vidro</td>
-                                <td>750,000k</td>
                             </tr>
                             <tr>
-                                <th scope="row">7</th>
+                                <td>200K</td>
+                                {{--<th scope="row">7</th>--}}
                                 <td>Comércio por atacado de peças e acessórios para motocicletas e motonetas</td>
-                                <td>200,000k</td>
                             </tr>
                             <tr>
-                                <th scope="row">8</th>
+                                <td>190K</td>
+                                {{--<th scope="row">8</th>--}}
                                 <td>Comércio varejista de materiais de construção em geral</td>
-                                <td>190,434k</td>
                             </tr>
                             <tr>
-                                <th scope="row">9</th>
+                                <td>158K</td>
+                                {{--<th scope="row">9</th>--}}
                                 <td>Comércio varejista de combustíveis para veículos automotores</td>
-                                <td>157,556k</td>
                             </tr>
                             <tr>
-                                <th scope="row">10</th>
+                                <td>150K</td>
+                                {{--<th scope="row">10</th>--}}
                                 <td>Comércio atacadista de instrumentos e materiais para uso médico, cirúrgico,
                                     hospitalar e de laboratórios
                                 </td>
-                                <td>150,000k</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </section>
-</div>
-
-</article>
+        </section>
+    </article>
 </div>
 
 <script src="js/app.js"></script>

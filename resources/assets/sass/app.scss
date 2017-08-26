@@ -101,3 +101,9 @@ table {
     font-family: "Open Sans", sans-serif;
   }
 }
+
+.row p {
+  font-size: 1.25em;
+  @extend .pt-4;
+  text-align: justify;
+}

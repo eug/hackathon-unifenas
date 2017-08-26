@@ -7780,6 +7780,7 @@ a.bg-dark:hover {
 }
 
 .pt-4,
+.row p,
 .py-4 {
   padding-top: 1.5rem !important;
 }
@@ -9410,5 +9411,10 @@ table {
 
 table th {
   font-family: "Open Sans", sans-serif;
+}
+
+.row p {
+  font-size: 1.25em;
+  text-align: justify;
 }
 
