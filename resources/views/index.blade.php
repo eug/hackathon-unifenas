@@ -69,6 +69,7 @@
 </div>
 
 <script src="js/app.js"></script>
+<script src="js/map_functions.js"></script>
 <script>
     $(".statistics-btn").click((element) => {
         element.preventDefault();
