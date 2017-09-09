@@ -5,6 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Eugênio Cabral, Hugo Camargo, Maurício Vidal, Vinícius Albano">
+
     <title>Data Alchemists - Hackathon</title>
 
     <link rel="stylesheet" href="/css/app.css">
@@ -285,6 +287,15 @@
                 </div>
                 <a class="statistics-btn">Visão Geral</a>
             </form>
+            <div style="font-weight: 400; margin-top:10px">
+                <span><strong>Autores:</strong></span>
+                <span>
+                    <a style="padding-right:10px" href="https://www.linkedin.com/in/eugfc">Eugênio Cabral</a>
+                    <a style="padding-right:10px" href="https://www.linkedin.com/in/hugo-pinto-6023a9141">Hugo Camargo</a>
+                    <a style="padding-right:10px" href="https://www.linkedin.com/in/maurício-roque-vidal-11118454">Maurício Vidal</a>
+                    <a style="padding-right:10px" href="https://www.linkedin.com/in/vinialbano">Vinícius Albano</a>
+                </span>
+            </div>
         </div>
     </div>
     <article class="article is-hidden">
@@ -458,7 +469,9 @@
             </section>
         </section>
     </article>
+
 </div>
+
 
 <script src="/js/app.js"></script>
 <script src="/js/map_functions.js"></script>
@@ -490,7 +503,7 @@
             $(".article").toggleClass("is-hidden");
             $(".form-row").toggleClass("is-hidden");
             $(this).text(function (i, text) {
-                return text === "Estatísticas" ? "Mapa" : "Estatísticas";
+                return text === "Estatísticas" ? "Visão Geral" : "Estatísticas";
             })
         });
 
